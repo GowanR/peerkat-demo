@@ -21,3 +21,7 @@ var chart = new Chart(ctx, {
     options: {}
 });
 
+setInterval(
+    function(){ 
+        //run chart update material
+    }, 3000);

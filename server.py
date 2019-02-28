@@ -6,7 +6,9 @@ app = Flask(__name__)
 number = 0
 click_stack = []
 n_clicks = 0
-
+with open("class_data.csv", "a") as class_data:
+        class_data.write("New Session\n")
+        class_data.close()
 @app.route("/")
 def hello():
     return "hello world"
@@ -28,6 +30,9 @@ def test():
     global n_clicks
     n_clicks += 1
     click_stack.append({"click #"+str(n_clicks):str(datetime.datetime.now())})
+    with open("class_data.csv", "a") as class_data:
+        class_data.write(str(n_clicks) + "," + str(datetime.datetime.now()) + "\n")
+        class_data.close()
     return "done."
 
 @app.route("/click/get")
