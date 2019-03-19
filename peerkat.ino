@@ -19,7 +19,18 @@ const char* resource = "/click";
 //const char* resource = "/trigger/button_pressed/with/key/nAZjOphL3d-ZO4N3k64-1A7gTlNSrxMJdmqy";
 
 // Maker Webhooks IFTTT
+
+
+//######################################################################################################################################
+// cmd --> 'ipconfig' --> ipv4 address
+//
+// Make sure this number is the same as your ipv4 address
+//######################################################################################################################################
 const char* server = "192.168.0.100";
+
+
+
+
 //const char* server = "192.168.1.246";
 
 void setup() {
